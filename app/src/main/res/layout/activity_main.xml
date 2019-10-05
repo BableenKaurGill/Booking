@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Booking Id"
+                    android:textSize="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:id="@+id/tv"
+                    android:textColor="#B3943A"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#8d161616"
+                    android:layout_below="@+id/tv"
+                    />
+            </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Information"
+                    android:textSize="20dp"
+                    android:textColor="#0C0C0C"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tv1"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/suvidha_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Suvidha Center Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Distributor Name"
+                        android:textColor="#000"
+                        android:id="@+id/distributor_et"
+                        android:imeOptions="actionNext"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:hint="Ward No."
+                        android:id="@+id/ward_et"
+                        android:imeOptions="actionNext"
+                        />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Contact No."
+                        android:textColor="#000"
+                        android:id="@+id/contact_et"
+                        android:imeOptions="actionNext"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/choose_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#B3943A"
+                            android:onClick="add_image"
+                            android:text="add photo"
+                            android:textColor="#fff" />
+
+
+                        <ImageView
+                            android:id="@+id/img"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/user"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Customer Name"
+                        android:textColor="#000"
+                        android:id="@+id/name_et"
+                        android:imeOptions="actionNext"
+                        />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Address"
+                        android:textColor="#000"
+                        android:id="@+id/add_et"
+                        android:imeOptions="actionNext"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Aadhaar Card No."
+                        android:textColor="#000"
+                        android:id="@+id/adhaar_et"
+                        android:imeOptions="actionNext"
+                        />
+
+
+                        <Button
+                            android:id="@+id/choose_adhaar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#B3943A"
+                            android:onClick="add_adhaar_card"
+                            android:text="add adhaar card"
+                            android:textColor="#fff" />
+
+
+                        <ImageView
+                            android:id="@+id/adhaar"
+                            android:layout_width="400dp"
+                            android:layout_height="248dp"
+                            android:background="@drawable/card" />
+
+
+
+
+
+                    <EditText
+                        android:id="@+id/pan_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pan No."
+                        android:imeOptions="actionNext"
+                        android:textColor="#000"
+                        android:textSize="20dp" />
+                    <Button
+                        android:id="@+id/choose_pan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#B3943A"
+                        android:onClick="add_pan_card"
+                        android:text="add pan card"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:id="@+id/pan"
+                        android:layout_width="400dp"
+                        android:layout_height="248dp"
+                        android:background="@drawable/card" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:hint="Email"
+                        android:textColor="#000"
+                        android:id="@+id/email_et"
+                        android:imeOptions="actionNext"
+                        />
+                </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Details"
+                android:textSize="20dp"
+                android:textColor="#0C0C0C"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:id="@+id/tv2"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Name"
+                android:id="@+id/bank_name"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:imeOptions="actionNext"
+                 />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Account"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:imeOptions="actionNext"
+                android:id="@+id/bank_account"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="IFSC Code"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:imeOptions="actionNext"
+                android:id="@+id/ifsc_code"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mode of Payment"
+                android:textColor="#000"
+                android:textSize="20dp"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioGroup"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DD"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/DD"
+                    android:buttonTint="#000"
+                    android:imeOptions="actionNext"
+                    android:textColor="#000"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheque"
+                    android:buttonTint="#000"
+                    android:id="@+id/cheque"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="2"
+
+                    />
+            </RadioGroup>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:imeOptions="actionNext"
+                android:id="@+id/amount"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Payment Details"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:imeOptions="actionNext"
+                android:id="@+id/payment" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference 1"
+                android:id="@+id/ref1"
+                android:backgroundTint="#B3943A"
+                android:onClick="reference1"
+                android:textColor="#fff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:id="@+id/refer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                     />
+
+                <EditText
+                    android:id="@+id/refer_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                    />
+                <EditText
+                    android:id="@+id/refer_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                     />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference 2"
+                android:id="@+id/ref2"
+                android:backgroundTint="#B3943A"
+                android:onClick="reference2"
+                android:textColor="#fff"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+
+                >
+
+                <EditText
+                    android:id="@+id/refer_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                    />
+
+                <EditText
+                    android:id="@+id/refer_contact1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                    />
+                <EditText
+                    android:id="@+id/refer_email1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:imeOptions="actionNext"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PTP form signed? "
+                android:textColor="#000"
+                android:textSize="18dp"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RadioGroup_ptp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/yes"
+                    android:buttonTint="#000"
+                    android:imeOptions="actionNext"
+                    android:textColor="#000"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:buttonTint="#000"
+                    android:id="@+id/no"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="2"
+
+                    />
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/upload_ptp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B3943A"
+                android:text="Upload PTP FORM"
+                android:onClick="upload_ptp"
+                android:textColor="#fff"/>
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B3943A"
+                android:onClick="submit"
+                android:text="submit"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
